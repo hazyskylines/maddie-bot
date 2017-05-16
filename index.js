@@ -1,7 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const token = require("./token.json").token
-
+client.on('ready', () => {
+    client.user.setStatus('online', "james is the best")
+     .then(user => console.log('check what the bot is playing xd'))
+     .catch(console.log);
+  
 client.on('ready' ,() => {
   console.log('Online.');
 })
